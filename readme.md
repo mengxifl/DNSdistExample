@@ -22,5 +22,11 @@ In my Administrative Network area. There are a lot of issues
 
 5、monitor DNS itself and Upstream DNS status monitor and we require access to DNS logs to send to Elasticsearch (ES).
 
-
 *If you do not have the aforementioned requirements I mentioned. Then you won't use DNSDist*
+
+## Basic  usage 
+
+https://github.com/mengxifl/DNSdistExample/blob/main/base.md
+
+
+
