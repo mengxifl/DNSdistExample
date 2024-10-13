@@ -1,4 +1,4 @@
-# DNSAction
+# addActions
 fhis is core feature of dnsdist. We need to discuss this in detail.
 
 first This is website
