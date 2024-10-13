@@ -26,7 +26,7 @@ In my Administrative Network area. There are a lot of issues
 
 ## Basic  usage 
 
-https://github.com/mengxifl/DNSdistExample/blob/main/base.md
+[https://github.com/mengxifl/DNSdistExample/blob/main/base.md](https://github.com/mengxifl/DNSdistExample/blob/main/addActions.md)
 
 
 
