@@ -64,6 +64,49 @@ function luaRuleTest(dq)
 end
 ```
 
-7、
+7、 combine rules  [combine rules ](https://dnsdist.org/reference/selectors.html#combining-rules)
+andRule:
+```
+  addAction(
+    AndRule{
+      QNameRule("www.google.com"),
+      NetmaskGroupRule("172.16.2.30/32")
+    },
+    PoolAction( "google" )
+  )
+```
 
+orRule:
+```
+  addAction(
+    OrRule{
+      QNameRule("www.google.com"),
+      NetmaskGroupRule("172.16.2.2/32")
+    },
+    PoolAction( "google" )
+  )
+```
+
+notRule
+```
+  addAction(
+    NotRule{
+      QNameRule("www.google.com"),
+      NetmaskGroupRule("172.16.2.2/32")
+    },
+    PoolAction( "google" )
+  )
+```
+
+combine rule
+```
+  addAction(
+    AndRule{
+      QNameRule("www.google.com"),
+      NetmaskGroupRule("172.16.2.2/32"),
+      NotRule{NetmaskGroupRule("172.16.2.2/32"), NetmaskGroupRule("172.16.2.3/32")}
+    },
+    PoolAction( "google" )
+  )
+```
 
