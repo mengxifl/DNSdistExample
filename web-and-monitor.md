@@ -28,4 +28,6 @@ set promethus to scrape data
     - <dnsdist_host_id>:8084
 ```
 
+use api to edit rules web site is : https://dnsdist.org/guides/webserver.html#dnsdist-api
 
+here are a lot of example that you can test. Test is important 
