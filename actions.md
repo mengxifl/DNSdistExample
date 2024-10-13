@@ -168,6 +168,45 @@ https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-paramet
 
 ### LuaAction
 Using LuaAction, we can do many things that we want to accomplish.
-  
+LuaAction: https://dnsdist.org/reference/actions.html#LuaAction
+
+example:
+```
+  addAction(  AllRule(),
+    LuaAction(
+      function (dq)
+        print(dq)
+        return DNSAction.Pool, 'google'
+      end
+    )
+  )
+```
+The function has a parameter called dq, which refers to the DNSQuestion object. More information can be found here: https://dnsdist.org/reference/dq.html?highlight=dq#the-dnsquestion-dq-object.
+You can use dq functions and this construct.
+
+such as:
+```
+  addAction( QNameRule('www.dist-test.com'),
+    LuaAction(
+      function (dq)
+        print(dq.qname)
+        dq:spoof({ newCA('1.1.1.1') })
+        return DNSAction.SpoofRaw
+      end
+    )
+  )
+```
+When a client queries the domain name www.dist-test.com, dnsdist will print 'www.dist-test.com' and then tell the client that the IP address for www.dist-test.com is 1.1.1.1.
+
+
+LuaAction had a special function is
+setRestartable  https://dnsdist.org/reference/dq.html?highlight=dq#DNSQuestion:setRestartable
+that will allow you use lua script control query. that how the action will do when query is faild
+
+
+
+
+
+
 
 
