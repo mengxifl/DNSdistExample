@@ -30,3 +30,9 @@ In my Administrative Network area. There are a lot of issues
 ## addActions  
 An action performed after the client initiates a request but before dnsdist forwards the request to the upstream pool
 [https://github.com/mengxifl/DNSdistExample/blob/main/base.md](https://github.com/mengxifl/DNSdistExample/blob/main/addActions.md)
+
+## addResponseAction
+addResponseAction is an action. This action occurs after the upstream DNS response but before dnsdist responds to the client."
+[https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md](https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md)
+
+## 
