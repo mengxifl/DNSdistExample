@@ -204,9 +204,20 @@ setRestartable  https://dnsdist.org/reference/dq.html?highlight=dq#DNSQuestion:s
 that will allow you use lua script control query. that how the action will do when query is faild
 
 
+Last luaAction requre return 
+https://dnsdist.org/reference/constants.html#dnsaction
 
-
-
+example
+```
+  addAction( QNameRule('www.dist-test.com'),
+    LuaAction(
+      function (dq)
+        -- this is must retrun DNSAction
+        return DNSAction.None
+      end
+    )
+  )
+```
 
 
 
