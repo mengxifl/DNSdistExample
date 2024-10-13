@@ -167,4 +167,7 @@ https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-paramet
 
 
 ### LuaAction
-Use LuaAction we can do a lot of thing that we want to do
+Using LuaAction, we can do many things that we want to accomplish.
+  
+
+
