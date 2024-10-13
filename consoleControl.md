@@ -31,4 +31,4 @@ Unable to read configuration from '/etc/dnsdist.conf'
    .......
 >
 ```
-
+Simply put, it's a real-time Lua interpreter. You can input any dnsdist config or lua script
