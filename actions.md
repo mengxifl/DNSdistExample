@@ -21,8 +21,8 @@ DNSrule: This is a condition, indicating that when it is met, the action will be
 ## detail the rule selector
 web site: https://dnsdist.org/reference/selectors.html#rule-selectors
 
-Here are a lot of DNSrule. I am not using them all but the logic is the same.
-Here are some DNSRules that I think can resolve my issue
+Here are a lot of DNSrule. I am not using them all
+Here are some DNSRules that I think can resolve my issue.
 
 
 1、all rule: [https://dnsdist.org/reference/selectors.html#AllRule](https://dnsdist.org/reference/selectors.html#AllRule)
@@ -109,4 +109,10 @@ combine rule
     PoolAction( "google" )
   )
 ```
+
+### actions
+As you can see, all the above examples query from the Google pool. This is not what we want.
+
+Then we must change the Action
+web site : [https://dnsdist.org/reference/actions.html](https://dnsdist.org/reference/actions.html)
 
