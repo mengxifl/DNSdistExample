@@ -25,9 +25,28 @@ Here are a lot of DNSrule. I am not using them all
 Here are some DNSRules that I think can resolve my issue.
 
 
-1、all rule: https://dnsdist.org/reference/selectors.html#AllRule
+1、all rule: [https://dnsdist.org/reference/selectors.html#AllRule](https://dnsdist.org/reference/selectors.html#AllRule)
 ```
 addAction( AllRule(), PoolAction("google") )
 ```
+
+2、QNameRule [https://dnsdist.org/reference/selectors.html#QNameRule](https://dnsdist.org/reference/selectors.html#QNameRule)
+```
+addAction( QNameRule("www.google.com"), PoolAction("google") )
+```
+This means if the query domain name is www.google.com, then use the Google pool to resolve it.
+
+3、RegexRule [https://dnsdist.org/reference/selectors.html#NetmaskGroupRule](https://dnsdist.org/reference/selectors.html#RegexRule)
+```
+addAction( RegexRule(".*\\.a\\.b\\.c\\.com"), PoolAction("google") )
+```
+This means if the query is match  Regex .*\\.a\\.b\\.c\\.com, then use the Google pool to resolve it.
+
+4、NetmaskGroupRule  [https://dnsdist.org/reference/selectors.html#NetmaskGroupRule](https://dnsdist.org/reference/selectors.html#NetmaskGroupRule)
+```
+addAction( NetmaskGroupRule("192.168.1.200/32"), PoolAction("google") )
+```
+This means if the query from host 192.168.1.200/32 net stagment , then use the Google pool to resolve it.
+
 
 
