@@ -48,5 +48,22 @@ addAction( NetmaskGroupRule("192.168.1.200/32"), PoolAction("google") )
 ```
 This means if the query from host 192.168.1.200/32 net stagment , then use the Google pool to resolve it.
 
+5、QTypeRule [ https://dnsdist.org/reference/selectors.html#RegexRule](https://dnsdist.org/reference/selectors.html#RegexRule)
+```
+addAction(QTypeRule(DNSQType.AAAA), PoolAction("google"))
+```
+This means if the query domain name is match type AAAA, then use the Google pool to resolve it.
+
+
+6、LuaRule [https://dnsdist.org/reference/selectors.html#AndRule](https://dnsdist.org/reference/selectors.html#AndRule)
+```
+addAction(LuaRule(luaRuleTest), PoolAction("google"))
+
+function luaRuleTest(dq)
+  return true
+end
+```
+
+7、
 
 
