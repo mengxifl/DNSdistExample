@@ -41,3 +41,9 @@ addResponseAction is an action. This action occurs after the upstream DNS respon
 ## dns cache
 https://github.com/mengxifl/DNSdistExample/blob/main/cache.md
 
+## QPS limit
+This is sample only give Web site: https://dnsdist.org/rules-actions.html?highlight=maxqpsiprule
+
+## work with console
+
+
