@@ -21,7 +21,7 @@ DNSrule: This is a condition, indicating that when it is met, the action will be
 ## detail the rule selector
 web site: https://dnsdist.org/reference/selectors.html#rule-selectors
 
-Here are a lot of DNSrule. I am not using them all
+Here are a lot of DNSrule. I am not using them all , but the logic is the same
 Here are some DNSRules that I think can resolve my issue.
 
 
@@ -115,4 +115,53 @@ As you can see, all the above examples query from the Google pool. This is not w
 
 Then we must change the Action
 web site : [https://dnsdist.org/reference/actions.html](https://dnsdist.org/reference/actions.html)
+
+as Rules
+Here are a lot of Action. I am not using them all , but the logic is the same.
+Here are some Action that I think can resolve my issue.
+
+1、PoolAction [https://dnsdist.org/reference/actions.html#PoolAction](https://dnsdist.org/reference/actions.html#PoolAction)
+```
+addAction( QNameRule("www.google.com"), PoolAction("google") )
+```
+
+2、NegativeAndSOAAction  [https://dnsdist.org/reference/actions.html#NegativeAndSOAAction](https://dnsdist.org/reference/actions.html#NegativeAndSOAAction)
+```
+addAction(RegexRule(".*\\.example\\.com"), NegativeAndSOAAction(true, "example.com", 3600, "ns1.example.com", "hostmaster.example.com", 2023100101, 3600, 900, 604800, 86400))
+```
+tip: Setting an SOA record in dnsdist is not recommended; it should only be done in special cases.
+
+
+3、SpoofAction  [https://dnsdist.org/reference/actions.html#SpoofAction](https://dnsdist.org/reference/actions.html#SpoofAction)
+```
+addAction("www.dist-test.com", SpoofAction({"1.1.1.1"}))
+```
+tip: Setting an A record in dnsdist should only be done according to your environment.
+
+4、LuaAction 
+```
+  addAction(
+    AndRule{
+      QNameRule('www.dist-test.com'),
+      makeRule("172.16.2.2/32")
+    },
+    LuaAction(
+      function (dq)
+        print(dq)
+        return DNSAction.Pool, 'google'
+      end
+    )
+```
+tip: This action is very important as it allows you to write Lua scripts to process DNS requests.
+
+5、RCodeAction
+```
+addAction(QTypeRule(DNSQType.AAAA), RCodeAction(DNSRCode.NOERROR))
+```
+turn DNSRCode to some code
+code is here : https://dnsdist.org/reference/constants.html#rcode
+
+The codes and their functions can be found here: 
+https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6
+
 
