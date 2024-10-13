@@ -45,5 +45,4 @@ https://github.com/mengxifl/DNSdistExample/blob/main/cache.md
 This is sample only give Web site: https://dnsdist.org/rules-actions.html?highlight=maxqpsiprule
 
 ## work with console
-
-
+https://github.com/mengxifl/DNSdistExample/blob/main/consoleControl.md
