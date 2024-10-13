@@ -35,4 +35,7 @@ An action performed after the client initiates a request but before dnsdist forw
 addResponseAction is an action. This action occurs after the upstream DNS response but before dnsdist responds to the client."
 [https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md](https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md)
 
-## 
+## web webAPI monitor and regist responds
+[https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md](https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md)
+
+## dns cache
