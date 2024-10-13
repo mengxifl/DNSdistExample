@@ -46,3 +46,5 @@ This is sample only give Web site: https://dnsdist.org/rules-actions.html?highli
 
 ## work with console
 https://github.com/mengxifl/DNSdistExample/blob/main/consoleControl.md
+
+## Lastly, some dnsdist library code written by myself.
