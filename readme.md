@@ -39,3 +39,5 @@ addResponseAction is an action. This action occurs after the upstream DNS respon
 [https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md](https://github.com/mengxifl/DNSdistExample/blob/main/addResponseAction.md)
 
 ## dns cache
+https://github.com/mengxifl/DNSdistExample/blob/main/cache.md
+
