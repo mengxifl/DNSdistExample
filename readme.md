@@ -48,3 +48,5 @@ This is sample only give Web site: https://dnsdist.org/rules-actions.html?highli
 https://github.com/mengxifl/DNSdistExample/blob/main/consoleControl.md
 
 ## Lastly, some dnsdist library code written by myself.
+
+this is private . If you want to know that . Please let me know
