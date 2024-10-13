@@ -21,8 +21,8 @@ DNSrule: This is a condition, indicating that when it is met, the action will be
 ## detail the rule selector
 web site: https://dnsdist.org/reference/selectors.html#rule-selectors
 
-Here are a lot of DNSrule. I am not using them all
-Here are some DNSRules that I think can resolve my issue.
+Here are a lot of DNSrule. I am not using them all but the logic is the same.
+Here are some DNSRules that I think can resolve my issue
 
 
 1、all rule: [https://dnsdist.org/reference/selectors.html#AllRule](https://dnsdist.org/reference/selectors.html#AllRule)
