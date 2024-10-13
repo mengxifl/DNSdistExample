@@ -138,7 +138,7 @@ addAction("www.dist-test.com", SpoofAction({"1.1.1.1"}))
 ```
 tip: Setting an A record in dnsdist should only be done according to your environment.
 
-4、LuaAction 
+4、LuaAction  https://dnsdist.org/reference/actions.html#LuaAction
 ```
   addAction(
     AndRule{
@@ -154,7 +154,8 @@ tip: Setting an A record in dnsdist should only be done according to your enviro
 ```
 tip: This action is very important as it allows you to write Lua scripts to process DNS requests.
 
-5、RCodeAction
+
+5、RCodeAction https://dnsdist.org/reference/actions.html#RCodeAction
 ```
 addAction(QTypeRule(DNSQType.AAAA), RCodeAction(DNSRCode.NOERROR))
 ```
@@ -165,3 +166,5 @@ The codes and their functions can be found here:
 https://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-6
 
 
+### LuaAction
+Use LuaAction we can do a lot of thing that we want to do
