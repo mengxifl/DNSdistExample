@@ -25,8 +25,8 @@ In my Administrative Network area. There are a lot of issues
 *If you do not have the aforementioned requirements I mentioned. Then you won't use DNSDist*
 
 ## Basic  usage 
+[https://github.com/mengxifl/DNSdistExample/blob/main/base.md](https://github.com/mengxifl/DNSdistExample/blob/main/base.md)
 
+## addActions  
+An action performed after the client initiates a request but before dnsdist forwards the request to the upstream pool
 [https://github.com/mengxifl/DNSdistExample/blob/main/base.md](https://github.com/mengxifl/DNSdistExample/blob/main/addActions.md)
-
-
-
